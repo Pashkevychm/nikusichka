@@ -103,7 +103,3 @@ productsContainer.addEventListener("click",function(event) {
 })
 renderProducts(products)
 setupFilterButtons()
-
-            
-
-
