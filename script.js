@@ -32,9 +32,45 @@ let products = [
         type: "poverbank",
         price: 65000
     },
-];
 
-let cart = [];
+     {
+        id: 5,
+        name: "Tv",
+        image: "img/main-image.jpeg",
+        description: "зручний телевізор для переглядання.",
+        type: "Tv",
+        price: 25000
+    },
+
+       {
+        id: 6,
+        name: "printer",
+        image: "img/superprinter.jpg",
+        description: "зручний принтер для друкування.",
+        type: "printer",
+        price: 200000
+    },
+
+       {
+        id: 7,
+        name: "tablet",
+        image: "img/istockphoto-1004165346-612x612.jpg",
+        description: "зручний планшет для використання.",
+        type: "tablet",
+        price: 200000
+    },
+
+        {
+        id: 8,
+        name: "column",
+        image: "img/14f2f11bf35da60b319d7a569a457718.jpg",
+        description: "зручна колонка  для слухання.",
+        type: "column",
+        price: 100000
+    },
+    
+];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 let productsContainer = document.querySelector('.products-div');
 let btnGroup = document.querySelector('.btn-group');
@@ -48,7 +84,7 @@ function renderProducts(items) {
 
     items.forEach(function(item) {
         let productHTML = `
-            <article class="product">
+            <article class="product" data-id=${item.id}>
                 <img src="${item.image}" alt="" class="product-img">
                 <h3 class="product-title">${item.name}</h3>
                 <p class="product-description">${item.description}</p>
@@ -70,12 +106,16 @@ function applyFilters(categoryType){
 }
 
 function addToCart(productId){
-    let product = products.find(p => p.id  == productId);
-    if (product) {
-        cart.push(product);
-        alert("Товар додано"+ product.name)
-        //# Тут  буде збереження в Cookies or localStorage
+    let cartProduct = cart.find(p => p.id == productId);
+    if(cartProduct){
+        cartProduct.quantity +=1
     }
+    else{
+        let product = products.find(p => p.id == productId);
+        cart.push({  ...product, quantity: 1 })
+    }
+    localStorage.setItem('cart',JSON.stringify(cart))
+   alert("Товар додано!")
     }
 
 
@@ -84,6 +124,11 @@ function addToCart(productId){
     "Телефони": "phone",
     "Ноутбуки": "laptop",
     "Повербанки": "poverbank",
+    "Телевізори": "Tv",
+    "Наушникі": "airpods",
+    "Планшети": "tablet",
+    "Колонки": "column",
+
 }
 function setupFilterButtons(){
     for(let button of btnGroup.children){
@@ -97,7 +142,7 @@ function setupFilterButtons(){
 productsContainer.addEventListener("click",function(event) {
     if(event.target.classList.contains("add-to-cart-btn")){
         let productCart = event.target.closest('.product');
-        let productId = parselnt(productCart.dataset.id)
+        let productId = parseInt(productCart.dataset.id)
         addToCart(productId)
     }
 })

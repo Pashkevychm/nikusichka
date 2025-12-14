@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Кошик</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     <header></header>
-    
-    <main>
+
+    <main class="container">
+        <h2>Ваш кошик</h2>
+        
         <div class="cart-products">
-            <div class="cart-product">
-                <h3> Товар 1</h3>
-                <div class="count-box">
-                    <p>Кількість</p>
-                    <input type="number" id="count-produt1">
-                </div>
-            </div>
+        </div>
+
+        <div class="order-container">
+            <h4>Загальна ціна: <span class="total-price-display">0 грн</span></h4>
+            <button type="button" id="order-btn" class="order-btn">Замовити</button>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
