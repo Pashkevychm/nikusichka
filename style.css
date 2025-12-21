@@ -35,3 +35,15 @@ section{
     object-fit: contain;
     margin-bottom: 15px;
 }
+
+.order-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.product:hover{
+    position: relative;
+    bottom: 10px;
+}

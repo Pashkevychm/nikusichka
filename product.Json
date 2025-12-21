@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "iPhone 13",
+        "image": "img/apple-iphone-13-01.jpg",
+        "description": "Потужний смартфон з чудовою камерою.",
+        "type": "phone",
+        "price": 28000
+    },
+    {
+        "id": 2,
+        "name": "MacBook Air",
+        "image": "img/1582399075.jpg",
+        "description": "Легкий та швидкий ноутбук для роботи.",
+        "type": "laptop",
+        "price": 45000
+    },
+    {
+        "id": 3,
+        "name": "Airpods",
+        "image": "img/Apple_airpods_pro.jpg",
+        "description": "Легкий та зручні наушники для звучання.",
+        "type": "airpods",
+        "price": 55000
+    },
+
+    {
+        "id": 4,
+        "name": "poverbank",
+        "image": "img/72bedcd4abb7736fc33d0f50c8609146.jpg",
+        "description": "Легкий та швидкий повербанк  для заряджання.",
+        "type": "poverbank",
+        "price": 65000
+    },
+
+     {
+        "id": 5,
+        "name": "Tv",
+        "image": "img/main-image.jpeg",
+        "description": "зручний телевізор для переглядання.",
+        "type": "Tv",
+        "price": 25000
+    },
+
+       {
+        "id": 6,
+        "name": "printer",
+        "image": "img/superprinter.jpg",
+        "description": "зручний принтер для друкування.",
+        "type": "printer",
+        "price": 200000
+    },
+
+       {
+        "id": 7,
+        "name": "tablet",
+        "image": "img/istockphoto-1004165346-612x612.jpg",
+        "description": "зручний планшет для використання.",
+        "type": "tablet",
+        "price": 200000
+    },
+
+        {
+        "id": 8,
+        "name": "column",
+        "image": "img/14f2f11bf35da60b319d7a569a457718.jpg",
+        "description": "зручна колонка  для слухання.",
+        "type": "column",
+        "price": 100000
+    }
+    
+]
